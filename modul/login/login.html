@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk</title>
+    <link rel="stylesheet" href="https://kakaelkitch.github.io/kakaelkitchen.github.io/modul/login/style_log.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(left, #34495e, rgb(247, 194, 49));
+}
+
+.container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0,1);
+}
+
+.container .form{
+    padding: 30px;
+}
+
+.container .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.container .form .title a{
+    text-decoration: none;
+}
+
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 0; 
+    bottom: 0;
+    height: 3px; 
+    width: 30px;
+    background-color: rgb(247, 194, 49);
+    border-radius: 25px;
+}
+
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color: rgb(247, 194, 49);
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+}
+
+.input-field input:is(:focus, :valid) ~i{
+    color: rgb(247, 194, 49);
+}
+
+.input-field i.icon{
+    left: 0;
+}
+
+.input-field i.showHidePw{
+    right: 0;
+}
+
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input{
+    margin: 0 8px -2px 4px;
+    accent-color: #4070f4;
+}
+
+.form .text{
+    color: #333;
+    font-size: 14px;
+}
+
+.form a.text{
+    color: rgb(233, 176, 18);
+    text-decoration: none;
+}
+
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .submit{
+    margin-top: 35px;
+}
+
+
+.form .submit input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: rgb(247, 194, 49);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit input:hover{
+    background-color: #34495e;
+}
+
+.form .login-signup{
+    margin-top: 30px;
+    text-align: center;
+}
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form">
+            <div class="form-login">
+                <span class="title"> <a href="https://kakaelkitch.github.io/kakaelkitchen.github.io/">Login</a> </span>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Masukan Email Anda" required>
+                        <i class="uil uil-envelope"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" class="password" placeholder="Masukan Password Anda" required>
+                        <i class="uil uil-padlock icon"></i>
+                        <i class="uil uil-eye showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Ingat Saya</label>
+                        </div>
+                        <a href="#" class="text">Lupa Password?</a>
+                    </div>
+                    <div class="input-field submit">
+                        <a href="https://kakaelkitch.github.io/kakaelkitchen.github.io/" class="masuk"><span><input type="submit" value="Signup" required></span></a>
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Belum Punya Akun?</span>
+                    <a href="https://kakaelkitch.github.io/kakaelkitchen.github.io/modul/login/register.html" class="text signup-text">Daftar Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://kakaelkitch.github.io/kakaelkitchen.github.io/modul/login/script.js"></script>
+
+<script type="text/javascript">
+    const container = document.querySelector(".container");
+      pwShowHide = document.querySelectorAll(".showHidePw");
+      pwFields = document.querySelectorAll(".password");
+
+      pwShowHide.forEach(eyeIcon =>{
+          eyeIcon.addEventListener("click", ()=>{
+            pwFields.forEach(pwFields =>{
+                if(pwFields.type =="password"){
+                    pwFields.type = "text";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye-slash","uil-eye");
+                    })
+                }else{
+                    pwFields.type = "password";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye","uil-eye-slash");
+                    })
+                }
+            })
+          })
+      })
+
+
+</script>
+
+</html>

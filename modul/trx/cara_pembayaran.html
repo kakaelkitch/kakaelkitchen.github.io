@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="https://kakaelkitch.github.io/kakaelkitchen.github.io/modul/trx/style_pay.css">
+
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    min-height: 100vh;
+    background: -webkit-linear-gradient(left, #34495e, rgb(247, 194, 49));
+    padding-bottom: 70px;
+}
+
+.container form{
+    padding: 20px;
+    width: 700px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.container form .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container form .row .col{
+    flex: 1 1 250px;
+}
+
+.col .title a{
+    text-decoration: none;
+}
+
+.container form .row .col .title::before{
+    content: '';
+    position: absolute;
+    left: 0; 
+    bottom: 5px;
+    height: 3px; 
+    width: 30px;
+    background-color: rgb(247, 194, 49);
+    border-radius: 50px;
+}
+
+.container form .row .col .title{
+    color: #333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.container form .row .col .input-box{
+    margin: 15px 0;
+}
+
+.container form .row .col .input-box span{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.container form .row .col .input-box input{
+    width: 100%;
+    border: 1px solid #34495e;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.container form .row .col .input-box input:focus{
+    border: 1px solid rgb(247, 194, 49);
+}
+
+.container form .row .col .flex{
+    display: flex;
+    gap: 15px;
+}
+
+.container form .row .col .flex .input-box{
+    margin-top: 5px;
+}
+
+
+.container form .row .col .input-box img{
+    height: 35px;
+    margin-top: 0;
+    margin-bottom: 0;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn{
+    width: 100%;
+    padding: 12 px;
+    font-size: 17px;
+    background: rgb(247, 194, 49);
+    color: #fff;
+    margin-top: 5 px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.container form .submit-btn:hover{
+    background:#34495e;
+
+}
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <form action="">
+        <div class="row">
+            <div class="col">
+                <h3><span class="title"> <a href="https://kakaelkitch.github.io/kakaelkitchen.github.io/">Billing Address</a> </span></h3>
+                <div class="input-box">
+                    <span>Nama Lengkap:</span>
+                    <input type="text" placeholder="etc. Rizky Rahman Sahputra">
+                </div>
+                <div class="input-box">
+                    <span>Alamat Email: </span> 
+                    <input type="text" placeholder="example@gmail.com">
+                </div>
+                <div class="input-box">
+                    <span>Alamat Lengkap: </span>
+                    <input type="text" class="text" placeholder="Jalan-Dusun-Desa-Kecamatan-Kota-Provinsi-Kode Pos">
+                </div>
+                <div class="input-box">
+                    <span>Phone: </span>
+                    <input type="text" class="text" placeholder="628**********">
+                </div>
+
+                <div class="flex">
+                    <div class="input-box">
+                        <span>Metode Pengiriman: </span>
+                        <select>
+                            <option>COD</option>
+                            <option>Ekspedisi</option>
+                            <option>Ambil ke Kantor</option>
+                        </select>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div class="col">
+                <h3><span class="title"> <a href="https://kakaelkitch.github.io/kakaelkitchen.github.io/">Payment</a> </span></h3>
+                <div class="input-box">
+                    <span>Payment Accepted:</span>
+                    <img src="https://i.postimg.cc/W3FqcxPv/p1-3114707-f663317c-removebg-preview-1.png" alt="">
+                </div>
+                <div class="input-box">
+                    <span>Nama di Kartu: </span> 
+                    <input type="text" placeholder="mr. rizky rahman">
+                </div>
+                <div class="input-box">
+                    <span>Nomor Kartu Kredit: </span>
+                    <input type="number" placeholder="1111-2222-3333-4444">
+                </div>
+        
+                <div class="flex">
+                    <div class="input-box">
+                        <span>exp month: </span>
+                        <input type="text" placeholder="Oktober">
+                    </div>
+                    <div class="input-box">
+                        <span>exp year: </span>
+                        <input type="number" placeholder="2022">
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="input-box">
+                        <span>Metode Pembayaran: </span>
+                        <select>
+                            <option>Tunai</option>
+                            <option>Transfer</option>
+                            <option>Credit</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="input-box submit">
+        <a href="https://kakaelkitch.github.io/kakaelkitchen.github.io/"><input type="submit" value="proceed to checkout" class="submit-btn"></a>
+        </div>
+    </form>
+</div>
+</body>
+</html>
